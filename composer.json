@@ -1,6 +1,6 @@
 {
     "name": "gufy/laravel-rajaongkir",
-    "description": "",
+    "description": "This is a particular package that make Rajaongkir.com can be used in Laravel 5",
     "authors": [
         {
             "name": "Mochamad Gufron",

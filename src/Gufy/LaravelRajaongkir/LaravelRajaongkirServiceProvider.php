@@ -21,6 +21,20 @@ class LaravelRajaongkirServiceProvider extends ServiceProvider
 	public function register()
 	{
 		//
+		$this->app->singleton('rajaongkir',function($app){
+			return new Rajaongkir($app['config']['rajaongkir']);
+		});
+	}
+	public function boot(){
+      $path = config_path('rajaongkir.php');
+
+      $this->publishes([
+          __DIR__.'/config.php' => $path,
+      ], 'config');
+
+      if (file_exists($path)) {
+          $this->mergeConfigFrom($path, 'rajaongkir');
+      }
 	}
 
 	/**
@@ -30,7 +44,7 @@ class LaravelRajaongkirServiceProvider extends ServiceProvider
 	 */
 	public function provides()
 	{
-		return [];
+		return ['rajaongkir'];
 	}
 
 }

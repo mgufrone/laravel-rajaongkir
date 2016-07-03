@@ -1,0 +1,21 @@
+{
+    "name": "gufy/laravel-rajaongkir",
+    "description": "",
+    "authors": [
+        {
+            "name": "Mochamad Gufron",
+            "email": "mgufronefendi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "5.1.*",
+        "steevenz/rajaongkir": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gufy\\LaravelRajaongkir\\": "src/Gufy/LaravelRajaongkir"
+        }
+    },
+    "minimum-stability": "stable"
+}

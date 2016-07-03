@@ -1,7 +1,7 @@
 <?php namespace Gufy\LaravelRajaongkir;
 use Steevenz\Rajaongkir as Base;
-class Rajaongkir extends Base{
-  private Base $client;
+class Rajaongkir{
+  private $client;
   public function __construct($config = array()){
     $this->client = new Base($config);
   }
